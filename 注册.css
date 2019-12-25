@@ -91,6 +91,7 @@ list-style: none;
 .wrap{
 	width: 1500px;
 	height: 800px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 #firstPage{
