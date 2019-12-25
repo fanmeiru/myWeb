@@ -24,11 +24,13 @@ list-style: none;
 	background-color: #FFE4E1;
 	opacity: 0.97; 
 	z-index: 6;
+	position: fixed;
 }
 .head{
 	width: 1200px;
 	height: 50px;
 	margin: auto;
+	position: relative;
 }
 .search-left li{
 	list-style-type: inline-block;
