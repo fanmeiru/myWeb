@@ -24,13 +24,11 @@ list-style: none;
 	height: 50px;
 	background-color: #FFE0E1;
 	opacity: 0.97; 
-	position: fixed;
 }
 .head{
 	width: 1200px;
 	height: 50px;
 	 margin: auto;
-	 position: relative;
 }
 .search-left li{
 	list-style-type: inline-block;
@@ -90,7 +88,7 @@ list-style: none;
 
 #page{
 	width: 1519px;
-	height: 759px;
+	height: 709px;
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
@@ -348,7 +346,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 1px;
-	top: 52px;
+	top: 2px;
 }
 #d2{
 	width: 170px;
@@ -359,7 +357,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 1px;
-	top: 250px;
+	top: 200px;
 }
 #d3{
 	width: 150px;
@@ -370,7 +368,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 60px;
-	top: 450px;
+	top: 400px;
 }
 #d4{
 	width: 350px;
@@ -381,7 +379,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 1000px;
-	top: 350px;
+	top: 300px;
 }
 #d5{
 	width: 100px;
@@ -392,7 +390,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 450px;
-	top: 625px;
+	top: 575px;
 }
 #d6{
 	width: 150px;
@@ -403,7 +401,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 831px;
-	top: 550px;
+	top: 500px;
 }
 #d7{
 	width: 400px;
@@ -414,7 +412,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 510px;
-	top: 700px;
+	top: 650px;
 }
 #d8{
 	width: 220px;
@@ -425,7 +423,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 100px;
-	top: 150px;
+	top: 100px;
 }
 #d9{
 	width: 220px;
@@ -436,7 +434,7 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 500px;
-	top: 280px;
+	top: 230px;
 }
 #d10{
 	width: 220px;
@@ -447,6 +445,6 @@ list-style: none;
 	border-radius: 10px;
 	position: absolute;
 	left: 800px;
-	top: 90px;
+	top: 40px;
 }
 
