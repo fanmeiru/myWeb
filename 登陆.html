@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登陆</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="登陆.css">
+</head>
+<body>
+	<!-- 导航 -->
+	<div id="app">
+	<div class="head">
+		<div class="search-left">
+			<ul>
+			<li><img src="fmr/312.png" alt="logo"></li>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">国创</a></li>
+			<li><a href="#">治愈</a></li>
+			<li><a href="#">探险</a></li>
+			<li><a href="#">搞笑</a></li>
+			<li><a href="#">少儿</a></li>
+			<li><a href="#">全部</a></li>
+		
+			</ul>
+		</div>
+		<div class="search">
+			<form>
+				<input type="text" name="search" value="">
+				<button><img src="fmr/search.jpg"></button>
+			</form>
+		</div>
+		<div class="search-right">
+				<ul>
+				<li><a href="#">注册</a></li>
+				<li style="width:10px;height:50px;">/</li>
+				<li><a href="#">登陆</a></li>
+				<li><img src="fmr/load.jpg"></li>
+				</ul>
+		</div>	
+	</div>
+	</div>
+
+    <!-- 内容 -->
+	<div id="page">
+		<div id = "roundImg">
+			<div id ="slider">
+				<div class = "slide"><img src="fmr/img4.jpg" ></div>
+				<div class = "slide"><img src="fmr/img1.jpg" ></div>
+				<div class = "slide"><img src="fmr/img2.jpg" ></div>
+				<div class = "slide"><img src="fmr/img3.jpg" ></div>
+				<div class = "slide"><img src="fmr/img4.jpg" ></div>
+				<div class = "slide"><img src="fmr/img1.jpg" ></div>
+				<div class = "slide"><img src="fmr/img2.jpg" ></div>
+			</div>
+			<div id="over"></div>
+		</div>
+		<div class = "blank">
+			<div class="titleImg"><img src="fmr/312.png"></div>
+			<div class="selectInOrUp">
+				<div id="QQ">QQ登陆</div>
+				<div id="weixin">微信登陆</div>
+			</div>
+			<div id="message1">
+				<div id="name">
+					<img src="fmr/up.png">
+					<input type="text" name="QQ" placeholder="请输入QQ号">
+				</div>
+				<div id="pass">
+					<img src="fmr/pass.png">
+					<input type="password" name="weixin" placeholder="请输入密码">
+				</div>
+				<div id="code">
+					<input class="inp code" id = "inp" type="text" placeholder="验证码">
+					<input type="button" id="getCode" name="获取验证码" value="获取验证码">
+				</div>
+				<div id="codeImg">
+					<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+				</div>
+				<div id="ifMemo">
+					<input type="checkbox" name="save">自动登陆
+					<input type="checkbox" name="save">记住密码
+					<a href="#">找回密码</a>
+				</div>
+				<div id="up">登陆</div>
+				<a href="#">没有账号？点击注册</a>
+			</div>
+			<div id="message2">
+				<p>请使用微信扫描下方二维码登陆</p>
+				<img src="fmr/二维码.jpg">
+				<div id="cover"></div>
+				<div class="next"><input type="checkbox" name="save">下次自动登陆</div>
+			</div>
+		</div>
+		<div id="danmu">
+			<div id="d1"> 💗💗💗</div>
+			<div id="d2"> 爱了爱了妈呀💗💗</div>
+			<div id="d3">强烈推荐！！</div>
+			<div id="d4">都很好看，真的！！！！！啊啊啊啊啊啊</div>
+			<div id="d5">满意</div>
+			<div id="d6">真的是不错的</div>
+			<div id="d7">优秀优秀优秀优秀优秀优秀优秀优秀优秀</div>
+			<div id="d8">爱死这些电影和电视剧了</div>
+			<div id="d9">厉害(๑•̀ㅂ•́)و✧厉害</div>
+			<div id="d10">👍👍👍👍👍👍👍👍</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	//QQ、微信切换
+	var weixin = document.getElementById('weixin');
+	var QQ = document.getElementById('QQ');
+	var message1 = document.getElementById('message1');
+	var message2 = document.getElementById('message2');
+	QQ.onclick = function(){
+		message1.style.display = 'block';
+		message2.style.display = 'none';
+	}
+	weixin.onclick = function(){
+		message1.style.display = 'none';
+		message2.style.display = 'block';
+	}
+
+	//验证码
+	var button = document.getElementById('getCode');
+	var div = document.getElementById('codeImg');
+	var imag = document.createElement('img');
+	div.appendChild(imag);
+	var imgNum;
+	var imgs = ['zAZfB','ZEhUN','zFC9H','zhWY9','Zin4c','ZITGj','zJ6iV','zjsKP','ZKc9S','zKDXU'];//image\
+	button.onclick = function(){
+		var num = Math.floor(Math.random()*10);
+		imgNum = num;
+		var href = "fmr/" + imgs[num] + ".jpg";
+		imag.src = href;
+	}
+	var up = document.getElementById('up');
+	up.onclick = function up(){
+		if(inp.value != imgs[imgNum]){
+			alert('验证码错误');
+		}else{
+			alert("登陆成功");
+			window.location.href = "https://www.baidu.com/";
+		}
+	}
+
+	//轮播图
+	function getStyle(obj, attr){
+		if(obj.currentStyle){
+			console.log(obj.currentStyle[attr]);
+			return obj.currentStyle[attr];
+		} else {
+			return getComputedStyle(obj, null)[attr];
+		}
+	}
+	function animate(obj,json,callback){
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			isStop = true;
+			for(var attr in json){
+				var now = 0;
+				if(attr == 'opacity'){
+					now = parseInt(getStyle(obj,attr)*100);
+				}else{
+					now = parseInt(getStyle(obj,attr));
+				}
+				var speed = (json[attr] - now) / 8;
+				speed = speed>0?Math.ceil(speed):Math.floor(speed);
+				var cur = now + speed;
+				if(attr == 'opacity'){
+					obj.style[attr] = cur / 100;
+				}else{
+					obj.style[attr] = cur + 'px';
+				}
+				if(json[attr] !== cur){
+					isStop = false;
+				}
+			}
+			if(isStop){
+				clearInterval(obj.timer);
+				callback&&callback();
+			}
+		}, 30)
+	}
+
+	var isStop;
+	var index = 0;
+	var slider = document.getElementById('slider');
+	//切换下一张
+	function next(){
+		index++;+
+		animate(slider,{left:-300 - 404*index},function(){
+			if(index === 4){
+				slider.style.left = "-300px";
+				index = 0;
+			}
+		});
+	}
+	//图片自动轮播
+	var timer = setInterval(next,2000);
+
+
+	//滚动弹幕
+	var contain1 = document.getElementById("d1");
+	setInterval(function(){
+	    contain1.style.left=parseInt(getStyle(contain1,"left"))-1+"px";
+		if(parseInt(getStyle(contain1,"left"))<=-90){
+			contain1.style.left="1530px";
+		}
+	},30);
+	var contain2 = document.getElementById("d2");
+	setInterval(function(){
+	    contain2.style.left=parseInt(getStyle(contain2,"left"))-1+"px";
+		if(parseInt(getStyle(contain2,"left"))<=-170){
+			contain2.style.left="1530px";
+		}
+	},30);
+	var contain3 = document.getElementById("d3");
+	setInterval(function(){
+	    contain3.style.left=parseInt(getStyle(contain3,"left"))-1+"px";
+		if(parseInt(getStyle(contain3,"left"))<=-150){
+			contain3.style.left="1530px";
+		}
+	},30);
+	var contain4 = document.getElementById("d4");
+	setInterval(function(){
+	    contain4.style.left=parseInt(getStyle(contain4,"left"))-1+"px";
+		if(parseInt(getStyle(contain4,"left"))<=-350){
+			contain4.style.left="1530px";
+		}
+	},30);
+	var contain5 = document.getElementById("d5");
+	setInterval(function(){
+	    contain5.style.left=parseInt(getStyle(contain5,"left"))-1+"px";
+		if(parseInt(getStyle(contain5,"left"))<=-100){
+			contain5.style.left="1530px";
+		}
+	},30);
+	var contain6 = document.getElementById("d6");
+	setInterval(function(){
+	    contain6.style.left=parseInt(getStyle(contain6,"left"))-1+"px";
+		if(parseInt(getStyle(contain6,"left"))<=-150){
+			contain6.style.left="1530px";
+		}
+	},30);
+	var contain7 = document.getElementById("d7");
+	setInterval(function(){
+	    contain7.style.left=parseInt(getStyle(contain7,"left"))-1+"px";
+		if(parseInt(getStyle(contain7,"left"))<=-400){
+			contain7.style.left="1530px";
+		}
+	},30);
+	var contain8 = document.getElementById("d8");
+	setInterval(function(){
+	    contain8.style.left=parseInt(getStyle(contain8,"left"))-1+"px";
+		if(parseInt(getStyle(contain8,"left"))<=-220){
+			contain8.style.left="1530px";
+		}
+	},30);
+	var contain9 = document.getElementById("d9");
+	setInterval(function(){
+	    contain9.style.left=parseInt(getStyle(contain9,"left"))-1+"px";
+		if(parseInt(getStyle(contain9,"left"))<=-220){
+			contain9.style.left="1530px";
+		}
+	},30);
+	var contain10 = document.getElementById("d10");
+	setInterval(function(){
+	    contain10.style.left=parseInt(getStyle(contain10,"left"))-1+"px";
+		if(parseInt(getStyle(contain10,"left"))<=-220){
+			contain10.style.left="1530px";
+		}
+	},30);
+</script>
+</body>
+</html>
