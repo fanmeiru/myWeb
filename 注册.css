@@ -95,6 +95,8 @@ list-style: none;
 	height: 800px;
 	margin: 0 auto;
 	overflow: hidden;
+	position: relative;
+	top: 50px;
 }
 #firstPage{
 	width: 1600px;
