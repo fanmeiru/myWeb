@@ -89,6 +89,7 @@ list-style: none;
 #page{
 	width: 1519px;
 	height: 709px;
+	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
 }
