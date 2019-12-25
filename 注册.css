@@ -1,0 +1,284 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,ol,li{
+	list-style: none;
+}
+body{
+	background-color:#FFFAFA;
+}
+#app a{
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	color: black;
+}
+ul,li{
+list-style: none;
+}
+#app{
+	width: 100%;
+	height: 50px;
+	background-color: #FFE4E1;
+	opacity: 0.97; 
+	z-index: 6;
+}
+.head{
+	width: 1200px;
+	height: 50px;
+	margin: auto;
+}
+.search-left li{
+	list-style-type: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+	float: left;
+	text-align: center;
+	color: white;
+	line-height: 50px;
+}
+.search-left img{
+	width: 70px;
+	height: 50px;
+
+}
+.search form{
+	position: absolute;
+	left: 800px;
+	top: 10px;
+	width: 220px;
+	height: 20px;
+}
+.search input{
+	width: 200px;
+	height: 20px;
+}
+.search img{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+}
+.search button{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 3px;
+}
+.search-right li{
+	list-style-type: inline-block;
+	width: 50px;
+	height: 50px;
+	float: right;
+	text-align: center;
+	color: white;
+	line-height: 50px;
+}
+.search-right img{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	position: absolute;
+	top: 11px;
+}
+
+
+/*第一页*/
+.wrap{
+	width: 1500px;
+	height: 800px;
+	overflow: hidden;
+}
+#firstPage{
+	width: 1600px;
+	height: 1530px;
+	z-index: 1;
+	position: relative;
+	top: -20px;
+	left: -1000px;
+}
+/*表单*/
+.blank{
+	width: 600px;
+	height: 533px;
+	z-index: 4;
+	border-radius: 8px;
+	background-image: linear-gradient(to bottom, #fff 0%, 		pink 100%);
+	overflow: hidden;
+	z-index: 2;
+	position: absolute;
+	top: 100px;
+	left: 450px;
+}
+.import{
+	width: 20px;
+	color: red;
+	margin-bottom: 42px;
+	position: relative;
+	top: -275px;
+	left: 70px;
+}
+#name,#pass{
+	width: 400px;
+	height: 40px;
+	background-color: rgba(0,0,0,0);
+	border: 1.5px solid #DCDCDC;
+	border-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	top: 20px;
+	left: 85px;
+}
+#p1{
+	width: 400px;
+	height: 10px;
+	z-index: 99;
+	border-color: 1px solid blue;
+	position: relative;
+	top: 200px;
+	left: 400px;
+}
+.blank select{
+	width: 100px;
+	height: 43px;
+	color: gray;
+	background-color: rgba(0,0,0,0);
+	border: 1.5px solid #DCDCDC;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	position: relative;
+	top: 84px;
+	left: -323px;
+}
+#num{
+	width: 302px;
+	height: 40px;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	border: 1.5px solid #DCDCDC;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	top: 20px;
+	left: 183px;
+}
+#code{
+	width: 245px;
+	height: 40px;
+	outline: none;
+	background-color: rgba(0,0,0,0);
+	border: 1.5px solid #DCDCDC;
+	border-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	top: 85px;
+	left: -225px;
+}
+#getCode{
+	width: 150px;
+	height: 43px;
+	outline: none;
+	cursor: pointer;
+	color: rgb(50,50,50);
+	background-color: 	#6495ED;
+	border: 1.5px solid #DCDCDC;
+	border-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	top: 22px;
+	left: 336px;
+}
+#type{
+	width: 400px;
+	height: 40px;
+	background-color: rgba(0,0,0,0);
+	border: 1.5px solid #DCDCDC;
+	border-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	top: 85px;
+	left: -70px;
+}
+#agree{
+	font-size: 14px;
+	position: relative;
+	top: 100px;
+	left: 85px;
+}
+#agree a{
+	text-decoration: none;
+	color: 	#6480FF;
+}
+#in{
+	width: 400px;
+	height: 40px;
+	cursor: pointer;
+	background-color: #649BFF;
+	border: 1.5px solid #DCDCDC;
+	border-radius: 5px;
+	margin-top: 20px;
+	position: relative;
+	top: 90px;
+	left: 85px;
+}
+.blank>a{
+	color: 	#6450FF;
+	font-size: 13px;
+	text-decoration: none;
+	position: relative;
+	top: 130px;
+	left: -50px;
+}
+.titleImg{
+	width: 600px;
+	height: 60px;
+	border-bottom: 1px solid rgb(230,230,230);
+	text-align: center;
+}
+.titleImg>img{
+	height: 60px;
+	width: 132px;
+}
+.message{
+	width: 400px;
+	height: 428px;
+}
+#cake{
+	z-index: 99;
+	position: absolute;
+	top: 390px;
+	left: 470px;
+}
+#paggi{
+	z-index: 99;
+	position: absolute;
+	top: 104px;
+	left: 850px;
+}
+/*bottom*/
+.bottom{
+	height: 100px;
+	width: 1535px;
+	margin: 0 auto;
+	background-color: rgb(130,130,130);
+	position: absolute;
+	top: 730px;
+	left: 10px;
+}
+ .bottom p{
+ 	text-align: center;
+ 	padding-top: 23px;
+ 	color: white;
+ 	font-size: 14px;
+ }
+ .b1{
+ 	margin: 0 14px;
+ }
+ .bottom a{
+ 	color: white;
+ }
