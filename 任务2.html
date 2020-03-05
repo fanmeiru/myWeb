@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 黑体;
+        }
+        
+        #wrap {
+            padding-left: 10px;
+        }
+        
+        fieldset {
+            width: 400px;
+            height: 530px;
+        }
+        
+        legend {
+            color: red;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        
+        h1 {
+            padding-bottom: 12px;
+        }
+        
+        p {
+            padding: 8px 10px;
+        }
+        
+        input {
+            margin-left: 10px;
+            width: 360px;
+            height: 26px;
+        }
+        
+        .must {
+            color: red;
+            margin-left: 4px;
+        }
+        
+        #sub {
+            margin-left: 14px;
+            background-color: silver;
+            border: 1px solid silver;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>学生信息</h1>
+        <fieldset style="width: 400px;">
+            <legend>学生档案</legend>
+            <form method="get" action="">
+
+                <p>姓名：</p>
+                <input type="text" name="name" placeholder="请输入姓名" required><span class="must">*</span>
+
+                <p>学号：</p>
+                <input type="number" name="id" placeholder="请输入学号" required><span class="must">*</span>
+
+                <p>手机号码：</p>
+                <input type="tel " name="tel " placeholder="请输入手机号 " required><span class="must ">*</span>
+
+                <p>邮箱地址：</p>
+                <input type="email " name="email " placeholder="请输入邮箱地址 " required><span class="must ">*</span>
+
+                <p>录取学校：</p>
+                <input type="search " name="school " list="schools ">
+
+                <p>入学成绩：</p>
+                <input type="number" name="score " min="0" max="100">
+
+                <p>入学时间：</p>
+                <input type="date" name="date"><br></br>
+
+                <input type="submit" id="sub">
+            </form>
+        </fieldset>
+    </div>
+    <datalist id="schools ">
+        <option value="河北师范大学 "/>
+        <option value="河北地质大学 "/>
+        <option value="河北科技大学 "/>
+        <option value="北京大学 "/>
+        <option value="清华大学 "/>
+    </datalist>
+</body>
+
+</html>
