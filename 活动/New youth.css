@@ -8,10 +8,15 @@ img {
     margin: 0 auto;
 }
 
+.img-explain {
+    color: gray;
+}
+
 #whole-wrap {
     width: 100%;
-    _height: 8400px;
+    _height: 10000px;
     margin: 0 auto;
+    padding-bottom: 120px;
 }
 
 .stars {
@@ -164,6 +169,7 @@ img {
 }
 
 #maker {
+    color: gray;
     font-size: 34px;
     font-weight: lighter;
     margin-top: 20px;
