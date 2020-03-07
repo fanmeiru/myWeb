@@ -10,7 +10,7 @@ img {
 
 #whole-wrap {
     width: 100%;
-    height: 8400px;
+    _height: 8400px;
     margin: 0 auto;
 }
 
@@ -46,14 +46,14 @@ img {
 
 #foreword-wrap {
     width: 90%;
-    height: 1000px;
+    _height: 1000px;
     margin: 10px auto;
     border: 2px dashed red;
     border-radius: 20px;
 }
 
 #foreword {
-    height: 935px;
+    _height: 935px;
     width: 92.5%;
     margin: 10px 10px;
     padding: 20px;
@@ -67,14 +67,14 @@ img {
 
 #example1-wrap {
     width: 90%;
-    height: 2120px;
+    _height: 2120px;
     margin: 10px auto;
     border: 2px dashed red;
     border-radius: 20px;
 }
 
 #example1 {
-    height: 2055px;
+    _height: 2055px;
     width: 93%;
     margin: 10px 10px;
     padding: 20px;
@@ -100,14 +100,14 @@ img {
 
 #example2-wrap {
     width: 90%;
-    height: 1130px;
+    _height: 1130px;
     margin: 10px auto;
     border: 2px dashed red;
     border-radius: 20px;
 }
 
 #example2 {
-    height: 1065px;
+    _height: 1065px;
     width: 93%;
     margin: 10px 10px;
     padding: 20px;
@@ -122,14 +122,14 @@ img {
 
 #example3-wrap {
     width: 90%;
-    height: 1730px;
+    _height: 1730px;
     margin: 10px auto;
     border: 2px dashed red;
     border-radius: 20px;
 }
 
 #example3 {
-    height: 1665px;
+    _height: 1665px;
     width: 93%;
     margin: 10px 10px;
     padding: 20px;
@@ -144,14 +144,14 @@ img {
 
 #ending-wrap {
     width: 90%;
-    height: 650px;
+    _height: 650px;
     margin: 10px auto;
     border: 2px dashed red;
     border-radius: 20px;
 }
 
 #ending {
-    height: 585px;
+    _height: 585px;
     width: 92.5%;
     margin: 10px 10px;
     padding: 20px;
