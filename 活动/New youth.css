@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+#whole-wrap {
+    width: 100%;
+    height: 8400px;
+    margin: 0 auto;
+}
+
+.stars {
+    width: 25%;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.red-split {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#title {
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 60px;
+}
+
+#people {
+    margin-top: 30px;
+    margin-left: 40px;
+    color: gray;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+#logo {
+    margin: 10px auto;
+}
+
+#foreword-wrap {
+    width: 90%;
+    height: 1000px;
+    margin: 10px auto;
+    border: 2px dashed red;
+    border-radius: 20px;
+}
+
+#foreword {
+    height: 935px;
+    width: 92.5%;
+    margin: 10px 10px;
+    padding: 20px;
+    border: 1.5px solid red;
+    border-radius: 20px;
+}
+
+#foreword p {
+    font-size: 40px;
+}
+
+#example1-wrap {
+    width: 90%;
+    height: 2120px;
+    margin: 10px auto;
+    border: 2px dashed red;
+    border-radius: 20px;
+}
+
+#example1 {
+    height: 2055px;
+    width: 93%;
+    margin: 10px 10px;
+    padding: 20px;
+    border: 1.5px solid red;
+    border-radius: 20px;
+}
+
+#example1 p {
+    font-size: 40px;
+    margin: 20px auto;
+}
+
+.example-title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.text {
+    text-indent: 70px;
+}
+
+#example2-wrap {
+    width: 90%;
+    height: 1130px;
+    margin: 10px auto;
+    border: 2px dashed red;
+    border-radius: 20px;
+}
+
+#example2 {
+    height: 1065px;
+    width: 93%;
+    margin: 10px 10px;
+    padding: 20px;
+    border: 1.5px solid red;
+    border-radius: 20px;
+}
+
+#example2 p {
+    font-size: 40px;
+    margin: 20px auto;
+}
+
+#example3-wrap {
+    width: 90%;
+    height: 1730px;
+    margin: 10px auto;
+    border: 2px dashed red;
+    border-radius: 20px;
+}
+
+#example3 {
+    height: 1665px;
+    width: 93%;
+    margin: 10px 10px;
+    padding: 20px;
+    border: 1.5px solid red;
+    border-radius: 20px;
+}
+
+#example3 p {
+    font-size: 40px;
+    margin: 20px auto;
+}
+
+#ending-wrap {
+    width: 90%;
+    height: 650px;
+    margin: 10px auto;
+    border: 2px dashed red;
+    border-radius: 20px;
+}
+
+#ending {
+    height: 585px;
+    width: 92.5%;
+    margin: 10px 10px;
+    padding: 20px;
+    border: 1.5px solid red;
+    border-radius: 20px;
+}
+
+#ending p {
+    font-size: 40px;
+}
+
+#maker {
+    font-size: 34px;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-left: 8%;
+}
