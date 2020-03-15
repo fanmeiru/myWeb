@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            padding-left: 10px;
+        }
+        
+        fieldset {
+            width: 400px;
+            _height: 200px;
+        }
+        
+        legend {
+            color: red;
+            font-size: 20px;
+        }
+        
+        #colors {
+            border: 1.5px solid gray;
+            padding: 10px;
+        }
+        
+        span {
+            width: 13px;
+            height: 20px;
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        
+        #text {
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <fieldset style="width: 400px;">
+            <legend>网页换肤</legend>
+            <div id="colors">
+                <span id="pink" style="background-color: pink;position: relative;"></span><span id="blue" style="background-color: blue;position: relative;"></span><span id="purple" style="background-color: purple;position: relative;"></span><span id="yellow"
+                    style="background-color: yellow;position: relative;"></span><span id="gray" style="background-color: gray;position: relative;"></span><span id="red" style="background-color: red;position: relative;"></span>
+            </div>
+            <div id="text">LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。</div>
+        </fieldset>
+    </div>
+
+    <script>
+        var spans = document.getElementsByTagName("span");
+        var colors = new Array('pink', 'blue', 'purple', 'yellow', 'gray', 'red');
+        var text = document.getElementById("text");
+        if (localStorage.pagecount) {
+            localStorage.pagecount = Number(localStorage.pagecount) + 1;
+            text.style.backgroundColor = localStorage.getItem("color"); //保持上一次颜色
+            for (var k = 0; k < spans.length; k++) {
+                if (spans[k].id == text.style.backgroundColor) {
+                    spans[k].style.top = "-5px";
+                }
+            }
+        } else {
+            localStorage.pagecount = 1;
+            text.style.backgroundColor = colors[0];
+            localStorage.setItem("color", colors[0]); //默认颜色为第一个
+            spans[0].style.top = "-5px";
+        } //第一次访问时设置背景色
+
+        //换色
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function change() {
+                //点击上移
+                for (j = 0; j < spans.length; j++) {
+                    spans[j].style.top = 0;
+                }
+                this.style.top = "-5px";
+                //换色并保存
+                text.style.backgroundColor = this.style.backgroundColor;
+                if (localStorage.getItem("color")) {
+                    localStorage.removeItem("color");
+                    localStorage.setItem("color", text.style.backgroundColor);
+                } else {
+                    localStorage.setItem("color", text.style.backgroundColor);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
