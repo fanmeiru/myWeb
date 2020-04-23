@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            /*文字不可选中*/
+        }
+        
+        canvas {
+            border-radius: 5px;
+        }
+        
+        #d {
+            width: 400px;
+            height: 150px;
+            text-align: center;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            font-size: 60px;
+            padding-top: 50px;
+            position: fixed;
+            top: 6px;
+            left: 6px;
+            z-index: -99;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="d"></span>
+    <canvas id="canvas" width="400" height="200">
+    
+</body>
+<script>
+    function ran() {
+        var arr = ["一等奖", "二等奖", "三等奖", "谢谢惠顾"];
+        var i = Math.floor(Math.random() * 4);
+        return arr[i];
+    }
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext('2d');
+    var word = document.getElementById("d");
+
+    //文字
+    word.innerHTML = ran();
+
+    //灰色覆盖
+    context.save();
+    context.beginPath();
+    context.fillStyle = "gray";
+    context.fillRect(0, 0, 400, 200);
+    context.closePath();
+    context.restore();
+
+    //点击与拖动事件变量
+    var draw = false;
+    var x, y;
+
+    //鼠标按下
+    canvas.onmousedown = function(e) {
+            draw = true;
+            x = e.pageX - canvas.offsetLeft;
+            y = e.pageY - canvas.offsetTop;
+            context.lineCap = "round";
+            context.lineWidth = 30;
+            context.strokeStyle = "gray";
+        }
+
+    //鼠标移动
+    canvas.onmousemove = function(e) {
+            if (draw) {
+                context.beginPath();
+                context.moveTo(x, y);
+                x = e.pageX - canvas.offsetLeft;
+                y = e.pageY - canvas.offsetTop;
+                context.lineTo(x, y);
+                context.stroke();
+                context.globalCompositeOperation = "destination-out";
+                check();
+            }
+    }
+
+    //鼠标松开
+    canvas.onmouseup = function() {
+        draw = false;
+    }
+
+    //鼠标点击
+    canvas.onclick = function(e){
+        draw = true;
+        if (draw) {
+            context.beginPath();
+            x = e.pageX - canvas.offsetLeft;
+            y = e.pageY - canvas.offsetTop;
+            context.arc(x,y,1,0,2*Math.PI);
+            context.stroke();
+            context.globalCompositeOperation = "destination-out";
+            check();
+        }
+        draw = false;
+    }
+
+
+    //能够获得涂抹区域百分比，当用户涂抹了60%后，去掉涂层完成刮奖。
+    function check() {
+        var data = context.getImageData(0, 0, 400, 200).data;
+        var n = 0;
+        for (var i = 0; i < data.length; i += 4) {
+            if (data[i] == 0 && data[i + 1] == 0 && data[i + 2] == 0 && data[i + 3] == 0)
+                n++;
+        }
+        var percent = n * 4 / data.length;
+        console.log(percent);
+        if (percent >= 0.6) {
+            canvas.parentNode.removeChild(canvas);
+        }
+    }
+</script>
+
+</html>
