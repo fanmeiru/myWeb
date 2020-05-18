@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 1024px;
+            height: 778px;
+            background-image: url(6-images/bg3.JPG);
+            background-repeat: no-repeat;
+        }
+        
+        #wrap div {
+            height: 140px;
+            background-color: white;
+            margin-top: 10px;
+            margin-left: 15px;
+            text-align: center;
+            display: inline-block;
+            transition-property: transform;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+        
+        #wrap div:hover {
+            transform: scale(1.1);
+        }
+        
+        #wrap div img {
+            width: auto;
+            height: 70%;
+            padding: 10px 10px 0 10px;
+        }
+        
+        #d1 {
+            transform: rotate(-2deg);
+        }
+        
+        #d3 {
+            transform: rotate(-8deg);
+        }
+        
+        #d5 {
+            transform: rotate(-5deg);
+        }
+        
+        #d6 {
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="d1"><img src="6-images/11.jpg" alt="相识"><br>相识</div>
+        <div id="d2"><img src="6-images/22.jpg" alt="相识"><br>凝视</div>
+        <div id="d3"><img src="6-images/33.jpg" alt="相识"><br>甜睡</div>
+        <div id="d4"><img src="6-images/44.jpg" alt="相识"><br>逗乐</div>
+        <div id="d5"><img src="6-images/55.jpg" alt="相识"><br>奔跑</div>
+        <div id="d6"><img src="6-images/66.jpg" alt="相识"><br>漠视</div>
+    </div>
+    <!-- <div id="try">
+        <img src="images/11.jpg" alt="相识">相识</div>
+    </div> -->
+</body>
+
+</html>
