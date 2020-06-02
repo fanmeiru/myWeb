@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            -webkit-backface-visibility: hidden;
+        }   
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wrap {
+            overflow: hidden;
+            width: 680px;
+            height: 400px;
+            margin: 150px auto auto auto;
+            position: relative;
+        }
+        
+        img {
+            width: 680px;
+            height: 400px;
+        }
+        
+        /* 箭头 */
+        
+        .arrow {
+            width: 30px;
+            height: 27px;
+            text-align: center;
+            padding-top: 3px;
+            border-radius: 15px;
+            color: black;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(8, 8, 8, 0.2);
+            transition: background-color 0.2s linear;
+            position: absolute;
+        }
+        .arrow:hover{
+            background-color: rgba(8, 8, 8, 0.6);
+            cursor: pointer;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+        }
+        
+        #left {
+            position: absolute;
+            top: 50%;
+        }
+        
+        #right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+        
+        .pages {
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+        }
+        
+        .pages li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(196, 183, 183, 0.5);
+            border-radius: 50%;
+            margin: 0 2px;
+        }
+        
+        .currentPage {
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(196, 183, 183, 0.4);
+            position: relative;
+            top: 3px;
+        }
+
+        span{
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="imgs">
+            <img class="img" src="img07/01.webp" />
+            <img class="img" src="img07/02.webp" />
+            <img class="img" src="img07/03.webp" />
+            <img class="img" src="img07/04.webp" />
+            <img class="img" src="img07/05.webp" />
+            <img class="img" src="img07/06.webp" />
+            <img class="img" src="img07/07.jpg" />
+            <img class="img" src="img07/08.webp" />
+        </div>
+        <!-- 箭头 -->
+        <div class="arrow" id="left"><</div>
+        <div class="arrow" id="right">></div>
+        <!-- 页码 -->
+        <div class="pages">
+            <li class="page"><span></span></li>
+            <li class="page"></li>
+            <li class="page"></li>
+            <li class="page"></li>
+            <li class="page"></li>
+            <li class="page"></li>
+            <li class="page"></li>
+            <li class="page"></li>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        //20
+        var index = 0;
+        $(".page").eq(index).addClass("currentPage").siblings().removeClass("currentPage");
+        // 自动轮播
+        var time = setInterval(move,3000);
+        function move(){
+            if(index != $(".pages li").length-1){
+                index++;
+            }else{
+                index = 0;
+            }
+            $(".page").eq(index).addClass("currentPage").siblings().removeClass("currentPage");
+            $(".pages li").empty();
+            $(".page").eq(index).append("<span></span>");
+
+            $(".img").eq(index).siblings().stop().fadeOut(0,300);
+            $(".img").eq(index).stop().fadeIn(300);
+        }
+        // 导航圆点  
+        $(".pages li").mousemove(function(){
+            index = $(this).index();
+            $(this).addClass("currentPage").siblings().removeClass("currentPage");
+            $(".pages li").empty();
+            $(this).append("<span></span>");
+            
+            $(".img").eq(index).siblings().stop().fadeOut(0,300);
+            $(".img").eq(index).stop().fadeIn(300);
+        })
+        // 鼠标滑入滑出
+        $(".wrap").hover(function(){
+            clearInterval(time);
+        },function(){
+            time = setInterval(move,3000);
+        })
+        // 左箭头
+        $("#left").click(function(){
+            if(index != 0){
+                index--;
+            }else{
+                index = $(".pages li").length-1;
+            }
+            $(".page").eq(index).addClass("currentPage").siblings().removeClass("currentPage");
+            $(".pages li").empty();
+            $(".page").eq(index).append("<span></span>");
+
+            $(".img").eq(index).siblings().stop().fadeOut(0,300);
+            $(".img").eq(index).stop().fadeIn(300);
+        })
+        // 右箭头
+        $("#right").click(function(){
+            if(index != $(".pages li").length-1){
+                index++;
+            }else{
+                index = 0;
+            }
+            $(".page").eq(index).addClass("currentPage").siblings().removeClass("currentPage");
+            $(".pages li").empty();
+            $(".page").eq(index).append("<span></span>");
+
+            $(".img").eq(index).siblings().stop().fadeOut(0,300);
+            $(".img").eq(index).stop().fadeIn(300);
+        })
+    </script>
+</body>
+
+</html>
