@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js" /></script>
+    <script src="js/bootstrap.js" /></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>英华逸游官网</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        input {
+            outline: none;
+        }
+/*登录与注册*/
+        .sign {
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .phoneNum {
+            width: 85%;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+            text-align: right;
+        }
+        
+        span1 img {
+            height: 20px;
+            width: 23px;
+            position: relative;
+            right: 5px;
+        }
+        
+        span1 {
+            margin-right: 20px;
+            margin-left: 5px;
+        }
+        
+        span2 {
+            font-size: 12px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        span3 {
+            font-size: 9px;
+            margin: 0 5px;
+            position: relative;
+            top: -5%;
+        }
+        @media handled{
+            .sign {
+                display: none;
+            }
+        }
+        @media screen and (max-width:766px) {
+            .sign {
+                display: none;
+            }
+        }
+/*内容*/
+        .context {
+            min-height: 200px;
+            width: 100%;
+            background-image: url(img/back.png);
+            background-size:contain;
+        }
+    /* 导航 */
+        .navbar {
+            background: rgba(0, 0, 0, 0);
+        }
+        .nav-logo {
+            width: 142.4px;
+            height: 40px;
+            z-index: 99;
+            position: absolute;
+            left: 8%;
+            top: 5px;
+        }
+        
+        #nav-hide {
+            width: 500px;
+            background-color:white;
+            border-radius: 8px;
+        }
+        
+        .fast {
+            color: #fff;
+            background-color: orangered;
+            border: 1px solid coral;
+            border-radius: 7px;
+            padding: 5px 8px;
+            display: inline;
+            cursor: pointer;
+            position: absolute;
+            right: 15%;
+            top: 20%;
+        }
+
+        @media screen and (min-width:766px) {
+            #nav-hide {
+                color: black;
+                font-weight: 500;
+                background: rgba(0, 0, 0, 0);
+                position: relative;
+                left: 25%;
+            }
+            #nav-hide li {
+                color: black;
+                border-bottom: 2px solid rgba(0, 0, 0, 0);
+                padding: 0 2px;
+                margin: 0 8px;
+            }
+            #nav-hide li:hover {
+                border-bottom: 2px solid coral;
+            }
+            #nav-hide li>a:hover {
+                color: coral;
+            }
+            .fast{
+                display: none;
+            }
+        }
+        
+        @media handled{
+            #nav-hide {
+                width: 200px;
+                margin-left: 5%;
+                z-index: 99;
+                position: absolute;
+                top: 50px;
+                right: 0;
+            }
+            #nav-hide li>a:hover {
+                color: coral;
+            }
+            .navbar {
+                background: #fff;
+            }
+        }
+
+        @media screen and (max-width:766px) {
+            #nav-hide {
+                width: 200px;
+                margin-left: 5%;
+                z-index: 99;
+                position: absolute;
+                top: 50px;
+                right: 0;
+            }
+            #nav-hide li>a:hover {
+                color: coral;
+            }
+            .navbar {
+                background: #fff;
+            }
+        }
+        
+        
+    /* 第一张 */
+        .first-img {
+            height: 446px;
+            background-image: url(img/banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            margin-top: -20px;
+            position: relative;
+        }
+        
+        .first-big {
+            width: 453px;
+            height: 55px;
+            font-size: 40px;
+            font-weight: 400;
+            color: white;
+            position: absolute;
+            top: 15%;
+            left: 10%;
+        }
+        
+        .first-small {
+            width: 400px;
+            height: 60px;
+            color: white;
+            font-weight: lighter;
+            position: absolute;
+            top: 32%;
+            left: 10%;
+        }
+        
+        .first-small p:nth-child(1) {
+            width: 230px;
+            padding-top: 10px;
+            border-top: 0.5px solid white;
+        }
+        
+        .first-small p:nth-child(2) {
+            width: 280px;
+            padding-bottom: 10px;
+            border-bottom: 0.1px solid white;
+        }
+        
+        .first-mid {
+            width: 400px;
+            height: 40px;
+            font-size: 26px;
+            font-weight: lighter;
+            color: white;
+            position: absolute;
+            top: 32%;
+            left: 10%;
+        }
+        
+        .search-place {
+            width: 50%;
+            height: 40px;
+            border-radius: 5px;
+            position: relative;
+            top: 70%;
+            margin: 0 auto;
+        }
+        
+        .position {
+            width: 26%;
+            height: 40px;
+            background-color:  rgb(211, 212, 209);;
+            padding-top: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border: none;
+            text-align: center;
+            float: left;
+        }
+        
+        .position img {
+            padding-right: 10px;
+        }
+        
+        #search-place-input {
+            width: 51%;
+            height: 40px;
+            border: none;
+            float: left;
+            padding-left: 10px;
+        }
+        
+        .search {
+            width: 23%;
+            height: 40px;
+            background-color: coral;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            float: left;
+        }
+        
+        .search img {
+            padding-top: 4px;
+        }
+        
+        @media screen and (min-width:766px) {
+            .first-mid {
+                display: none;
+            }
+        }
+        @media handled{
+            .first-img{
+                height: 400px;
+            }
+            .first-small {
+                display: none;
+            }
+            .first-big{
+                width: 80%;
+                overflow: hidden;
+            }
+            .first-mid{
+                width: 60%;
+                overflow: hidden;
+            }
+            .search-place {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width:766px) {
+            .first-img{
+                height: 400px;
+            }
+            .first-small {
+                display: none;
+            }
+            .first-big{
+                width: 80%;
+                overflow: hidden;
+            }
+            .first-mid{
+                width: 60%;
+                overflow: hidden;
+            }
+            .search-place {
+                width: 90%;
+            }
+        }
+    /* 车辆接送 */
+    .send{
+        width: 85%;
+        height: 364px;
+        margin: 20px auto;
+        position: relative;
+    }
+    .sendl{
+        width: 80%;
+        height: 364px;
+        background-image: url(img/Sbanner2.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        float: left;
+    }
+    
+    .send-big{
+        color: white;
+        font-size: 36px;
+        position: absolute;
+        top: 10%;
+        right: 25%;
+    }
+    .send-small{
+        color: white;
+        font-size: 16px;
+        position: absolute;
+        top: 26%;
+        right: 25%;
+    }
+    .send-small p{
+        margin:5px;
+    }
+    .sendr{
+        width: 20%;
+        height: 364px;
+        text-align: center;
+        background-color: darkblue;
+        float: left;
+    }
+    .sendr img{
+                position: relative;
+                top:50px;
+            }
+    .sendr p{
+        color: white;
+        font-size: 20px;
+        position: relative;
+        top: 28%;
+    }
+    .send-go{
+        width: 120px;
+        padding: 5px 20px;
+        border: 1px solid white;
+        border-radius: 5px;
+        color:white;
+        cursor: pointer;
+        margin: 0 auto;
+        position: relative;
+        top: 35%;
+    }
+    @media screen and (min-width:766px){
+        .sendl img{
+            display: none;
+        }
+    }
+    @media handled{
+        .send{
+                width: 100%;
+                height: 150px;
+            }
+            .sendl{
+                height: 150px;
+                background: white;
+            }
+            .sendl img{
+                height: 50%;
+                position: absolute;
+                margin: 4% 2%;
+            }
+            .send-big{
+                color: darkblue;
+                font-size: 26px;
+                position: absolute;
+                top: 15%;
+                left: 20%;
+            }
+            .send-small{
+                color: rgb(88, 85, 85);
+                font-size: 14px;
+                position: absolute;
+                top: 48%;
+                left: 20%;
+            }
+            .sendr{
+                height: 150px;
+                background: white;
+            }
+            .sendr img,.sendr p{
+                display: none;
+            }
+            .send-go{
+                width: 120px;
+                padding: 5px 20px;
+                border: 1px solid darkblue;
+                border-radius: 5px;
+                color:darkblue;
+                cursor: pointer;
+                margin: 0 auto;
+                position: relative;
+                top: 35%;
+                right: 20%;
+            }
+    }
+    @media screen and (max-width:766px) {
+            .send{
+                width: 100%;
+                height: 150px;
+            }
+            .sendl{
+                height: 150px;
+                background: white;
+            }
+            .sendl img{
+                height: 50%;
+                position: absolute;
+                top: 8%;
+                margin: 4% 3%;
+            }
+            .send-big{
+                color: darkblue;
+                font-size: 26px;
+                position: absolute;
+                top: 15%;
+                left: 20%;
+            }
+            .send-small{
+                color: rgb(88, 85, 85);
+                font-size: 14px;
+                position: absolute;
+                top: 48%;
+                left: 20%;
+            }
+            .sendr{
+                height: 150px;
+                background: white;
+            }
+            .sendr img,.sendr p{
+                display: none;
+            }
+            .send-go{
+                width: 120px;
+                padding: 5px 20px;
+                border: 1px solid darkblue;
+                border-radius: 5px;
+                color:darkblue;
+                cursor: pointer;
+                margin: 0 auto;
+                position: relative;
+                top: 35%;
+                right: 20%;
+            }
+        }
+    /* 热门线路 */
+        mark{
+                background-color: rgba(0, 0, 0, 0);
+                color: white;
+                font-size: 16px;
+            }
+        .routes{
+            width: 85%;
+            margin: 0 auto;
+            min-height: 200px;
+        }
+        .routes-title{
+            text-align: center;
+        }
+        .routes-title p:nth-child(1){
+            font-size: 26px;
+        }
+        .routes-title p:nth-child(2){
+            font-size: 12px;
+            margin-top: -9px;
+        }
+        @media screen and (max-width:766px) {
+            .routes{
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-left: 3%;
+                background-color: white;
+            }
+            .routes-title{
+                padding-left: 2%;
+                text-align: left;
+                border-left: 2px solid coral;
+            }
+            .routes-title p:nth-child(1){
+                font-size: 24px;
+            }
+            .routes-title p:nth-child(2){
+                display: none;
+            }
+        }
+        @media handled{
+            .routes{
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-left: 3%;
+                background-color: white;
+            }
+            .routes-title{
+                padding-left: 2%;
+                text-align: left;
+                border-left: 2px solid coral;
+            }
+            .routes-title p:nth-child(1){
+                font-size: 24px;
+            }
+            .routes-title p:nth-child(2){
+                display: none;
+            }
+        }
+
+        .routes-pictures{
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+            position: relative;
+        }
+        .routes-pictures img{
+            width: 100%;
+            height: auto;
+            background-size: cover;
+        }
+        
+        .routesl{
+            width: 49%;
+            height: 100%;
+            display: inline-block;
+            margin: 0 0.5%;
+        }
+        .routes-picturesl{
+            height: 49%;
+            width: auto;
+            margin: 1% 1%;
+            position: relative;
+        }
+        .routes-picturesl-introduce{
+            background-color: black;
+            color:white;
+            padding-left: 5%;
+            padding-top: 2%;
+        }
+        .routes-picturesl-introduce p:nth-child(1){
+            font-size: 12px;
+        }
+        .routes-picturesl-introduce p:nth-child(2){
+            font-size: 12px;
+            margin-top: -4px;
+            padding-bottom: 6px;
+        }
+
+        .routesr{
+            width: 49%;
+            height: 100%;
+            display: inline-block;
+            margin: 0 0.5%;
+            position: absolute;
+        }
+        .routes-picturesr{
+            height: 32%;
+            width: auto;
+            margin: 1% 1%;
+            overflow: hidden;
+            position: relative;
+        }
+        .routes-picturesr img{
+            height: 100%;
+        }
+        .routes-picturesr .routes-picturesr-introduce{
+            width: 100%;
+            background-color: rgba(33,33 ,33 , 0.5);
+            color: white;
+            padding-left: 5%;
+            padding-top: 3%;
+            position: absolute;
+            bottom: 0%;
+        }
+        .routes-picturesr-introduce p:nth-child(1){
+            font-size: 12px;
+        }
+        .routes-picturesr-introduce p:nth-child(2){
+            font-size: 12px;
+            margin-top: -4px;
+        }
+        @media screen and (min-width:766px){
+            .routes-more,
+            .routes-picturesl-introduce p:nth-child(3),
+            .routes-picturesl-introduce p:nth-child(4){
+                display: none;
+            }
+        }
+        @media handled{
+            .routes-pictures{
+                width: 95%;
+                position: relative;
+            }
+            .routesl{
+                width: 100%;
+            }
+            .routes-picturesl-introduce{
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                color:white;
+                padding-left: 5%;
+                padding-top: 2%;
+                position: absolute;
+                bottom: 0;
+            }
+            .routes-picturesl-introduce p:nth-child(1){
+                display: none;
+            }
+            .routes-picturesl-introduce p:nth-child(2){
+                position: absolute;
+                right: 5%;
+                top: 40%;
+            }
+            .routes-picturesl-introduce p:nth-child(3){
+                font-size: 14px;
+            }
+            .routes-picturesl-introduce p:nth-child(4){
+                font-size: 14px;
+                margin-top: -4px;
+                padding-bottom: 4px;
+            }
+            .routes-picturesl-introduce mark{
+                font-size: 22px;
+            }
+            .routesr{
+                display: none;
+            }
+            .routes-more{
+                width: 150px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px 15px;
+                margin: 10px auto;
+                cursor: pointer;
+            }
+        }
+        @media screen and (max-width:766px){
+            .routes-pictures{
+                width: 95%;
+                position: relative;
+            }
+            .routesl{
+                width: 100%;
+            }
+            .routes-picturesl-introduce{
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                color:white;
+                padding-left: 5%;
+                padding-top: 2%;
+                position: absolute;
+                bottom: 0;
+            }
+            .routes-picturesl-introduce p:nth-child(1){
+                display: none;
+            }
+            .routes-picturesl-introduce p:nth-child(2){
+                position: absolute;
+                right: 5%;
+                top: 40%;
+            }
+            .routes-picturesl-introduce p:nth-child(3){
+                font-size: 14px;
+            }
+            .routes-picturesl-introduce p:nth-child(4){
+                font-size: 14px;
+                margin-top: -4px;
+                padding-bottom: 4px;
+            }
+            .routes-picturesl-introduce mark{
+                font-size: 22px;
+            }
+            .routesr{
+                display: none;
+            }
+            .routes-more{
+                width: 150px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                text-align: center;
+                padding: 5px 15px;
+                margin: 10px auto;
+                cursor: pointer;
+            }
+        }
+
+    /* 使命与愿景 */
+        .service{
+            width: 85%;
+            margin: 0 auto;
+            min-height: 200px;
+            padding-top: 15px;
+            overflow: hidden;
+        }
+        .service mark{
+            display: none;
+        }
+        .service-title{
+            text-align: center;
+        }
+        .service-title p:nth-child(1){
+            font-size: 26px;
+        }
+        .service-title p:nth-child(2){
+            font-size: 12px;
+            margin-top: -9px;
+        }
+        @media screen and (max-width:766px) {
+            .service{
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-left: 3%;
+                background-color: white;
+            }
+            .service-title{
+                padding-left: 2%;
+                text-align: left;
+                border-left: 2px solid coral;
+            }
+            .service mark{
+                display: inline;
+                color: #000;
+                font-size: 13px;
+            }
+            .service-title p:nth-child(1){
+                font-size: 24px;
+            }
+            .service-title p:nth-child(2){
+                display:none;
+            }
+        }
+        @media handled{
+            .service{
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-left: 3%;
+                background-color: white;
+            }
+            .service-title{
+                padding-left: 2%;
+                text-align: left;
+                border-left: 2px solid coral;
+            }
+            .service mark{
+                display: inline;
+                color: #000;
+                font-size: 13px;
+            }
+            .service-title p:nth-child(1){
+                font-size: 24px;
+            }
+            .service-title p:nth-child(2){
+                display: none;
+            }
+        }
+
+        .service-context{
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* 第一张 */
+        .service-first{
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgba(50, 81, 121, 0.9);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        @media screen and (min-width:766px) {
+            .service-first>img{
+                width: 40%;
+            }
+            .service-first>div{
+                width: 60%;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .service-first>div p:nth-child(1){
+                font-size: 26px;
+                text-align: center;
+                margin-top: 8%;
+            }
+            .service-first>div p:nth-child(2){
+                display: none;
+            }
+            .service-first>div p:nth-child(3){
+                font-size: 20px;
+                width: 80%;
+                margin: 0 auto;
+                padding-top: 20px;
+            }
+            .service-second{
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        @media screen and (max-width:766px) {
+            .service-first{
+                margin: 0 auto;
+                background-color: white;
+                color: black;
+            }
+            .service-first>img{
+                width: 95%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .service-first>div{
+                width: 100%;
+                padding-top: 40px;
+            }
+            .service-first>div p:nth-child(1){
+                display: none;
+            }
+            .service-first>div p:nth-child(2){
+                font-size: 26px;
+                text-align: center;
+                /* margin-top: 8%; */
+            }
+            .service-first>div p:nth-child(3){
+                font-size: 20px;
+                width: 80%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .service-second{
+                width: 95%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        @media handled {
+            .service-first{
+                margin: 0 auto;
+                background-color: white;
+                color: black;
+            }
+            .service-first>img{
+                width: 95%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .service-first>div{
+                width: 100%;
+                padding-top: 40px;
+            }
+            .service-first>div p:nth-child(1){
+                display: none;
+            }
+            .service-first>div p:nth-child(2){
+                font-size: 26px;
+                text-align: center;
+                /* margin-top: 8%; */
+            }
+            .service-first>div p:nth-child(3){
+                font-size: 20px;
+                width: 80%;
+                margin: 0 auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .service-second{
+                width: 95%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        /* 服务优势 */
+        .service-third{
+            margin-top: 10px;
+        }
+        @media screen and (min-width:766px){
+            .service-third{
+                background-color: rgb(50, 81, 121);
+                color: white;
+                text-align: center;
+                padding-bottom: 150px;
+                position: relative;
+            }
+            .service-third>p:nth-child(1){
+                display: none;
+            }
+            .third-back{
+                width: 150px;
+                height: 150px;
+                background-image: url(img/rorate.png);
+                background-position: center center;
+                background-size:contain;
+                background-repeat: no-repeat;
+                padding-top: 4%;
+                position: relative;
+                top:35px;
+            }
+            .service-third1 img{
+                position: absolute;
+                top: 20%;
+                left: 31%;
+            }
+            .service-third2 img,.service-third3 img{
+                position: absolute;
+                top: 20%;
+                left: 33%;
+            }
+            .third-back p{
+                position: absolute;
+                left: 30%;
+                bottom: 12%;
+            }
+            .service-third1{
+                position: relative;
+                left: 10%;
+            }
+            .service-third2{
+                position: absolute;
+                left: 40%;
+                top: 0;
+            }
+            .service-third3{
+                position: absolute;
+                left: 70%;
+                top: 0;
+            }
+            .third-hide{
+                display: none;
+            }
+            .third-text{
+                width: 300px;
+                position: absolute;
+                bottom: -120px;
+                left: -80px;
+            }
+            .service-hide2{
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:766px){
+            .service-third{
+                width: 95%;
+                margin: 0 auto;
+                text-align: left;
+                padding-top: 10px;
+                overflow: hidden;
+            }
+            .service-third>p{
+                padding-top: 20px;
+                margin-bottom: -15px;
+                text-align: center;
+                font-size: 26px;
+            }
+            .third-back{
+                position: relative;
+            }
+            .third-back p,.service-hide1{
+                display: none;
+            }
+            .service-third1,.service-third2,.service-third3{
+                width: 98%;
+                height: 80px;
+                padding-top: 50px;
+                padding-bottom: 100px;
+                border-bottom: 1px solid gray;
+            }
+            .third-back img{
+                position: absolute;
+                top: 10px;
+                left: 10%;
+            }
+            .service-third2 img,.service-third3 img{
+                margin-top: -3%;
+            }
+            .third-text p{
+                padding-left: 30%;
+            }
+        }
+        @media handled{
+            .service-third{
+                width: 95%;
+                margin: 0 auto;
+                text-align: left;
+                padding-top: 30px;
+                overflow: hidden;
+            }
+            .service-third>p{
+                text-align: center;
+                font-size: 26px;
+            }
+            .third-back{
+                position: relative;
+            }
+            .third-back p,.service-hide1{
+                display: none;
+            }
+            .service-third1,.service-third2,.service-third3{
+                width: 98%;
+                height: 80px;
+                padding-top: 50px;
+                padding-bottom: 100px;
+                border-bottom: 1px solid gray;
+            }
+            .third-back img{
+                position: absolute;
+                top: 10px;
+                left: 10%;
+            }
+            .service-third2 img,.service-third3 img{
+                margin-top: -3%;
+            }
+            .third-text p{
+                padding-left: 30%;
+            }
+        }
+/* 页脚 */
+        .foot{
+            background-color: black;
+        }
+        .foot-up{
+            width: 85%;
+            margin: 0 auto;
+            color: white;
+            padding: 30px 0;
+            border-bottom: 1px solid gray;
+        }
+        .foot-up>div{
+            padding: 10px 0;
+            word-wrap:break-word;
+        }
+        .foot-sp{
+            padding-right: 10px;
+        }
+        .foot-co-worker span:nth-child(1){
+            position: relative;
+            top: -50px;
+        }
+        .foot-co-worker span div{
+            padding: 0 5px;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            /* word-wrap:break-word; */
+        }
+        .foot-co-worker span div>p{
+            font-size: 12px;
+            padding-top: 8px;
+        }
+        .foot a{
+            color: rgb(190, 183, 183);
+            font-size: 13px;
+            font-weight: lighter;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        .foot-down{
+            color:white;
+            font-size: 13px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        .foot-ph{
+            width: 100%;
+            background-color: black;
+        }
+        .foot-ph div{
+            text-align: center;
+            color: white;
+            padding: 30px 0;
+        }
+        @media screen and (min-width:766px){
+            .foot-ph{
+                display: none;
+            }
+        }
+        @media screen and (max-width:766px){
+            .foot-PC{
+                display: none;
+            }
+        }
+        @media handled{
+            .foot-PC{
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- 登录与注册 -->
+    <div class="sign">
+        <div class="phoneNum">
+            <span1><img src="img/tell.png" alt="tell">400-808-8682</span1>
+            <span2>请登录</span2>
+            <span3>|</span3>
+            <span2>注册</span2>
+        </div>
+    </div>
+<!-- 内容 -->
+    <div class="context">
+        <!-- 导航 -->
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <!-- 折叠按钮 -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-hide">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">
+                    <img class="nav-logo" src="img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="fast">快速定制</div>
+            <!-- 折叠内容 -->
+            <div class="collapse navbar-collapse" id="nav-hide">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">热门路线</a></li>
+                    <li><a href="#">签证推荐</a></li>
+                    <li><a href="#">使命愿景</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- 第一张 -->
+        <div class="first-img">
+            <div class="first-big">悠游古欧洲 遍览德法瑞意</div>
+            <div class="first-small">
+                <p>巴黎卢浮宫、塞纳河游船、凡尔赛宫</p>
+                <p>少女峰、大运河游船、金色列车、西庸城堡</p>
+            </div>
+            <div class="first-mid">全程升级热早+1晚5星酒店</div>
+            <div class="search-place">
+                <div class="position"><img src="img/position.png" alt="position">目的地</div>
+                <input type="text" name="place" id="search-place-input" placeholder=" ︱ 日本  美国  英国  地中海">
+                <div class="search"><img src="img/search.png" alt="seatch"></div>
+            </div>
+        </div>
+        <!-- 车辆接送 -->
+        <div class="send">
+            <div class="sendl">
+                <img src="img/carH.png" alt="car">
+                <div class="send-big" class="col-mid-9">机场接送  省钱省心</div>
+                <div class="send-small">
+                    <p>提供上海、苏州、无锡各市</p>
+                    <p>往返机场、码头接送服务，更有包车服务</p>
+                </div>
+            </div>
+            <div class="sendr">
+                <img src="img/car.png" alt="bus">
+                <p>车辆接送</p>
+                <div class="send-go">查看详情</div>
+            </div>
+        </div>
+        <!-- 热门线路 -->
+        <div class="routes">
+            <div class="routes-title">
+                <p>热 门 线 路</p>
+                <p>Popular tourist routes</p>
+            </div>
+            <div class="routes-pictures">
+                <div class="routesl">
+                    <div class="routes-picturesl">
+                        <img src="img/hot1.jpg" alt="hot1">
+                        <div class="routes-picturesl-introduce">
+                            <p>海南三亚5天4晚，纯玩，4晚红树林度假王国</p>
+                            <p>￥<mark>2580</mark> / 人起</p>
+                            <p>海南三亚5天4晚</p>
+                            <p>纯玩，4晚红树林度假王国</p>
+                        </div>
+                    </div>
+                    <div class="routes-picturesl">
+                        <img src="img/hot2.jpg" alt="hot2">
+                        <div class="routes-picturesl-introduce">
+                            <p>德法意瑞欧洲4国，ABCD任意线路任您挑选</p>
+                            <p>￥<mark>7999</mark> / 人起</p>
+                            <p>德法意瑞欧洲4国</p>
+                            <p>ABCD任意线路任您挑选</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="routesr">
+                    <div class="routes-picturesr">
+                        <img src="img/hot3.jpg" alt="hot3">
+                        <div class="routes-picturesr-introduce">
+                            <p>曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</p>
+                            <p>￥<mark>2799</mark> / 人起</p>
+                        </div>
+                    </div>
+                    <div class="routes-picturesr">
+                        <img src="img/hot4.jpg" alt="hot4">
+                        <div class="routes-picturesr-introduce">
+                            <p>日本本州游 樱花、寿司、温泉、美食</p>
+                            <p>￥<mark>5399</mark> / 人起</p>
+                        </div>
+                    </div>
+                    <div class="routes-picturesr">
+                        <img src="img/hot5.jpg" alt="hot5">
+                        <div class="routes-picturesr-introduce">
+                            <p>斯里兰卡7天6晚全景游  保证入住2晚香格里拉</p>
+                            <p>￥<mark>7999</mark> / 人起</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="routes-more">查看更多 ></div>
+            </div>
+        </div>
+        <!-- 使命与愿景 -->
+        <div class="service">
+            <div class="service-title">
+                <p>使命与愿景<mark>: 让旅游回归本质，体验纯粹旅游</mark></p>
+                <p><mark>:</mark>让旅游回归本质，体验纯粹旅游</p>
+            </div>
+            <div class="service-context">
+                <div class="service-first">
+                    <img src="img/mission1.jpg" alt="mission1">
+                    <div>
+                        <p>服务理念及优势</p>
+                        <p>--服务理念--</p>
+                        <p>“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+                    </div>
+                </div>
+                <img src="img/mission2.jpg" alt="mission2" class="service-second">
+                <div class="service-third">
+                    <p>--服务优势--</p>
+                    <div class="service-third1">
+                        <div class="third-back">
+                            <img src="img/icon1.png" alt="icon1" class="service-hide1">
+                            <img src="img/icon11.png" alt="icon1" class="service-hide2">
+                            <p>品质行程</p>
+                        </div>
+                        <div class="third-text">
+                            <p>旅游达人精心设计、基于口碑反复打磨，</p>
+                            <p class="third-hide">告别人山人海鸡肋景点</p>
+                            <p>全网最好，敢跟任何产品比</p>
+                        </div>  
+                    </div>
+                    <div class="service-third2">
+                        <div class="third-back">
+                            <img src="img/icon2.png" alt="icon2" class="service-hide1">
+                            <img src="img/icon22.png" alt="icon1" class="service-hide2">
+                            <p>品质消费</p>
+                        </div>
+                        <div class="third-text">
+                            <p>不推自费</p>
+                            <p>不进垃圾购物店和伪景点</p>
+                        </div>
+                    </div>
+                    <div class="service-third3">
+                        <div class="third-back">
+                            <img src="img/icon3.png" alt="icon3" class="service-hide1">
+                            <img src="img/icon33.png" alt="icon1" class="service-hide2">
+                            <p>品质小团</p>
+                        </div>
+                        <div class="third-text">
+                            <p>独立成团不散拼</p>
+                            <p>只跟亲朋好友一起玩，每天发团</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 页脚 -->
+    <div class="foot">
+        <div class="foot-PC">
+            <div class="foot-up">
+                <div class="foot-co-worker">
+                    <span class="foot-sp">合作伙伴</span>
+                    <span>
+                        <div>
+                            <img src="img/xiecheng.png" alt="携程">
+                            <p>携程网</p>
+                        </div>
+                        <div>
+                            <img src="img/feizhu.png" alt="飞猪">
+                            <p>阿里飞猪</p>
+                        </div>
+                        <div>
+                            <img src="img/quna.png" alt="去哪儿">
+                            <p>去哪儿</p>
+                        </div>
+                        <div>
+                            <img src="img/suzhou.png" alt="苏州旅游局">
+                            <p>苏州旅游局</p>
+                        </div>
+                    </span>
+                </div>
+                <div class="foot-places">
+                    <span class="foot-sp">热门位置</span>
+                    <a href="#">韩国</a><a href="#">日本</a><a href="#">菲律宾</a><a href="#">老挝</a><a href="#">越南</a><a href="#">柬埔寨</a><a href="#">泰国</a><a href="#">马来西亚</a><a href="#">新加坡</a><a href="#">印度尼西亚</a><a href="#">印度</a><a href="#">斯里兰卡</a><a href="#">土耳其</a><a href="#">阿联酋</a><a href="#">西班牙</a><a href="#">意大利</a><a href="#">希腊</a><a href="#">法国</a><a href="#">比利时</a><a href="#">荷兰</a><a href="#">英国</a><a href="#">瑞士</a><a href="#">奥地利</a><a href="#">德国</a><a href="#">匈牙利</a><a href="#">俄罗斯</a><a href="#">捷克</a><a href="#">芬兰</a><a href="#">葡萄牙</a><a href="#">冰岛</a><a href="#">美国</a><a href="#">加拿大</a><a href="#">巴西</a><a href="#">阿根廷</a><a href="#">澳大利亚</a><a href="#">新西兰</a>
+                </div>
+                <div class="foot-theme">
+                    <span class="foot-sp">主题服务</span>
+                    <a href="#">海岛度假</a><a href="#">历史文化</a><a href="#">探索冒险</a><a href="#">美食购物</a><a href="#">都市生活</a><a href="#">海外游学</a><a href="#">游轮度假</a><a href="#">蜜月摄影</a><a href="#">亲子乐园</a>
+                </div>
+                <div class="foot-links">
+                    <span class="foot-sp">友情链接</span>
+                    <a href="#">马蜂窝</a><a href="#">穷游</a><a href="#">booking</a><a href="#">苏州旅游局</a><a href="#">驴友网</a><a href="#">吾爱全球签证中心</a><a href="#">酒店团购</a><a href="#">携程旅游攻略</a><a href="#">天讯职航在线</a><a href="#">满天飞旅游网</a><a href="#">中国旅游网</a><a href="#">澳乐网</a><a href="#">背包兔旅游行程</a><a href="#">出境旅游</a><a href="#">国际酒店</a><a href="#">广州旅行社</a><a href="#">出境旅游</a><a href="#">517旅行</a><a href="#">花生游</a><a href="#">家园网</a><a href="#">海外婚礼</a>
+                </div>
+            </div>
+            <div class="foot-down">2020 @苏州英华国际旅游有限公司 版权所有</div>
+        </div>
+        <div class="foot-ph">
+            <div>
+                <p>苏ICP备号、2020</p>
+                <p>@苏州英华国际旅游有限公司 版权所有</p>
+                <p>技术支持 杭州科技</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
